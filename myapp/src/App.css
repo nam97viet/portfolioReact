@@ -11,10 +11,11 @@
 .App-header {
   background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   min-height: 100vh;
+  padding: 4rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: black;
 }
@@ -30,6 +31,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Row {
+  margin-bottom: 3rem;
 }
 
 .skills-container {
@@ -93,4 +103,27 @@
 .social-icon:hover {
   transform: translateY(-3px);
   transition: transform 0.2s ease-in-out;
+}
+
+.card {
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card ul {
+  padding-left: 1.2rem;
+}
+
+.card li {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.btn-dark {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-dark:hover {
+  transform: translateY(-2px);
 }
