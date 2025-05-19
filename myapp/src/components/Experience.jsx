@@ -43,7 +43,7 @@ const Experience = () => {
 
   return (
     <div id="experience" className="py-5">
-      <h2 className="text-center mb-4">Experience</h2>
+      <h2 className="text-center mb-4">EXPERIENCES</h2>
       <Container>
         <Row className="project-cards">
           {experiences.map((exp, index) => (

@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 function Project() {
   return (
     <div id="project">
-      <h2 className="text-center mb-4">Projects</h2>
+      <h2 className="text-center mb-4">PROJECTS</h2>
       <Container>
         <Row className="project-cards">
           <Card className="flex-row">
@@ -187,7 +187,7 @@ function Project() {
               <div className="d-flex gap-2">
                 <Button
                   variant="dark"
-                  href="https://github.com/sebgutierrez/Scorched-Earth"
+                  href="https://github.com/nam97viet/COSC4368_GroupProject"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

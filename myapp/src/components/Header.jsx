@@ -26,9 +26,9 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
           <Nav>
-            <Nav.Link href="#home" onClick={handleNavClick}>Home</Nav.Link>
-            <Nav.Link href="#project" onClick={handleNavClick}>Projects</Nav.Link>
-            <Nav.Link href="#experience" onClick={handleNavClick}>Experience</Nav.Link>
+            <Nav.Link href="#home" onClick={handleNavClick}>HOME</Nav.Link>
+            <Nav.Link href="#project" onClick={handleNavClick}>PROJECTS</Nav.Link>
+            <Nav.Link href="#experience" onClick={handleNavClick}>EXPERIENCES</Nav.Link>
           </Nav>
           <div className="d-flex align-items-center">
             <a
