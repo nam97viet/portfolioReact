@@ -5,17 +5,30 @@ import Button from 'react-bootstrap/Button';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function Header() {
+  const handleNavClick = (e) => {
+    e.preventDefault();
+    const targetId = e.target.getAttribute('href').slice(1);
+    
+    if (targetId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary fixed-top">
       <Container>
-        <Navbar.Brand href="#home">Nathan Tran</Navbar.Brand>
+        <Navbar.Brand href="#home" onClick={handleNavClick}>Nathan Tran</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
           <Nav>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
-            <Nav.Link href="#project">Projects</Nav.Link>
-            <Nav.Link href="#experience">Experiences</Nav.Link>
+            <Nav.Link href="#home" onClick={handleNavClick}>Home</Nav.Link>
+            <Nav.Link href="#project" onClick={handleNavClick}>Projects</Nav.Link>
+            <Nav.Link href="#experience" onClick={handleNavClick}>Experience</Nav.Link>
           </Nav>
           <div className="d-flex align-items-center">
             <a
@@ -34,7 +47,13 @@ function Header() {
             >
               <FaLinkedin size={24} className="linkedin-icon" />
             </a>
-            <Button variant="primary" href="#">CONNECT ME</Button>
+            <Button 
+              variant="primary" 
+              href="#connect"
+              onClick={handleNavClick}
+            >
+              CONNECT ME
+            </Button>
           </div>
         </Navbar.Collapse>
       </Container>

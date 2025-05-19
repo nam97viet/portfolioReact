@@ -1,3 +1,9 @@
+/* Base styles and variables */
+:root {
+  --mobile-padding: 1rem;
+  --tablet-padding: 1.5rem;
+  --desktop-padding: 2rem;
+}
 
 .App-logo {
   max-width: 100%;
@@ -134,4 +140,625 @@
   color: #666;
   margin-top: -0.5rem;
   margin-bottom: 1rem;
+}
+
+.cursor-star {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 1.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card.flex-row {
+  flex-direction: row;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.card-img-container {
+  width: 40%;
+  min-width: 300px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  width: 60%;
+  padding: 2rem;
+}
+
+/* Navbar styles */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Offset anchor points to account for fixed navbar */
+section[id] {
+  scroll-margin-top: 60px;
+}
+
+/* Active nav link */
+.nav-link.active {
+  color: #0d6efd !important;
+  font-weight: 500;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .card.flex-row {
+    flex-direction: column;
+  }
+
+  .card-img-container {
+    width: 100%;
+    min-width: auto;
+    max-height: 200px; /* Reduced from 300px */
+  }
+
+  .card-img {
+    height: 200px; /* Fixed height for mobile */
+    object-fit: contain; /* Changed from cover to contain */
+    padding: 1rem; /* Add padding around image */
+  }
+
+  .card-body {
+    width: 100%;
+    padding: 1rem; /* Reduced padding on mobile */
+  }
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+  .card-img-container {
+    max-height: 150px; /* Even smaller for iPhone SE/smaller devices */
+  }
+
+  .card-img {
+    height: 150px;
+  }
+}
+
+#experience .container {
+  max-width: 1400px;  /* Increased from 1200px */
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#experience .experience-row {
+  max-width: 1800px;  /* Increased for wider cards */
+}
+
+#experience .card {
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+  border: none;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#experience .card:hover {
+  transform: translateY(-5px);
+}
+
+#experience .card-title {
+  color: #333;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 1rem;  /* Added padding for long titles */
+}
+
+/* Remove hover effect for title since it should fit now */
+#experience .card:hover .card-title {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#experience ul li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.experience-container {
+  max-width: 800px;  /* Reduced from 1000px for better column layout */
+  margin: 0 auto;
+}
+
+#experience .card-body {
+  padding: 1.5rem;
+}
+
+#experience .card-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+#experience .card-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+#experience ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+#experience ul li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+#experience .small {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+#experience .card.flex-row {
+  flex-direction: row;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#experience .card-img-container {
+  width: 35%;
+  min-width: 250px;
+}
+
+#experience .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#experience .card-body {
+  width: 65%;
+  padding: 1.5rem;
+}
+
+#experience .card-title {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#experience ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+#experience ul li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 0 1rem;
+  }
+
+  #experience .card-body {
+    padding: 1.5rem;
+  }
+
+  #experience .card.flex-row {
+    flex-direction: column;
+  }
+
+  #experience .card-img-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  #experience .card-body {
+    width: 100%;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991.98px) {
+  #experience .container {
+    padding: 1rem;
+  }
+  
+  #experience .card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Base styles */
+:root {
+  --mobile-padding: 1rem;
+  --tablet-padding: 1.5rem;
+  --desktop-padding: 2rem;
+}
+
+/* General responsiveness */
+.container {
+  padding-left: var(--mobile-padding);
+  padding-right: var(--mobile-padding);
+}
+
+/* Header responsiveness */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 2rem 0;
+  }
+
+  .App-logo {
+    max-height: 300px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Skills section responsiveness */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-box {
+    width: 80px;
+    padding: 0.8rem;
+  }
+
+  .skill-box i {
+    font-size: 2rem;
+  }
+
+  .skill-box span {
+    font-size: 0.8rem;
+  }
+}
+
+/* Project cards responsiveness */
+@media (max-width: 1024px) {
+  .project-cards {
+    gap: 1.5rem;
+    margin: 0 1.5rem;
+  }
+
+  .card.flex-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-cards {
+    margin: 0 1rem;
+  }
+}
+
+/* Experience cards responsiveness */
+@media (max-width: 1024px) {
+  #experience .container {
+    padding: var(--tablet-padding);
+    margin: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #experience .container {
+    padding: var(--mobile-padding);
+    margin: 0 1rem;
+  }
+}
+
+/* iPhone SE / Small phones */
+@media (max-width: 375px) {
+  .project-cards,
+  #experience .container {
+    margin: 0 0.8rem;
+  }
+}
+
+/* iPad / Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project-cards,
+  #experience .container {
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project-cards {
+    gap: 1.5rem;
+  }
+
+  .card.flex-row {
+    flex-direction: column;
+  }
+
+  .card-img-container {
+    width: 100%;
+    height: 250px;
+  }
+
+  .card-body {
+    width: 100%;
+    padding: var(--tablet-padding);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-img-container {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: var(--mobile-padding);
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Experience cards responsiveness */
+@media (max-width: 1024px) {
+  #experience .container {
+    padding: var(--tablet-padding);
+  }
+
+  #experience .card {
+    margin-bottom: 1rem;
+  }
+
+  #experience .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #experience .container {
+    padding: var(--mobile-padding);
+  }
+
+  #experience .card-body {
+    padding: var(--mobile-padding);
+  }
+
+  #experience ul li {
+    font-size: 0.85rem;
+  }
+}
+
+/* iPhone SE / Small phones */
+@media (max-width: 375px) {
+  .container {
+    padding: 0.8rem;
+  }
+
+  .card-img-container {
+    height: 150px;
+  }
+
+  .skill-box {
+    width: 70px;
+    padding: 0.6rem;
+  }
+
+  .skill-box i {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* iPad / Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: var(--tablet-padding);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card.flex-row {
+    flex-direction: row;
+  }
+
+  .card-img-container {
+    width: 40%;
+    height: auto;
+  }
+
+  .card-body {
+    width: 60%;
+  }
+}
+
+/* Landscape orientation */
+@media (max-height: 768px) and (orientation: landscape) {
+  .App-header {
+    padding: 1.5rem 0;
+  }
+
+  .App-logo {
+    max-height: 250px;
+  }
+}
+
+/* iPhone (width < 768px) */
+@media (max-width: 767px) {
+  .container,
+  .project-cards,
+  #experience .container,
+  .skills-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .card.flex-row {
+    margin: 1rem 0;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* iPhone SE / Small phones (width < 376px) */
+@media (max-width: 375px) {
+  .container,
+  .project-cards,
+  #experience .container,
+  .skills-container {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    width: calc(100% - 1.6rem);
+  }
+
+  .card.flex-row {
+    margin: 0.8rem 0;
+  }
+
+  .card-body {
+    padding: 0.8rem;
+  }
+}
+
+/* iPhone Pro Max (width > 428px and < 926px) */
+@media (min-width: 428px) and (max-width: 926px) {
+  .container,
+  .project-cards,
+  #experience .container,
+  .skills-container {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    width: calc(100% - 2.4rem);
+  }
+}
+
+.connect-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.connect-form textarea {
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .connect-form {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+}
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.connect-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.form-label {
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  border: 2px solid #e9ecef;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #a1c4fd;
+  box-shadow: 0 0 0 0.2rem rgba(161, 196, 253, 0.25);
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  border: none;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(161, 196, 253, 0.4);
+}
+
+.alert-custom {
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .connect-form {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .form-wrapper {
+    max-width: 100%;
+  }
 }

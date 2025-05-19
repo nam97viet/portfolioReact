@@ -4,12 +4,16 @@ import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import Project from "./components/Projects";
 import Container from "react-bootstrap/Container";
+import CursorTrail from "./components/CursorTrail";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Experience from './components/Experience';
+import Connect from './components/Connect';
 
 function App() {
   return (
     <div className="App-container">
+      <CursorTrail />
       <Header />
       <div className="App">
         <header className="App-header">
@@ -37,6 +41,12 @@ function App() {
             </Row>
             <Row>
               <Project />
+            </Row>
+            <Row>
+              <Experience />
+            </Row>
+            <Row>
+              <Connect />
             </Row>
           </Container>
         </header>
