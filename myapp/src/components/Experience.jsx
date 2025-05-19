@@ -18,14 +18,14 @@ const Experience = () => {
       ]
     },
     {
-      title: "Teaching Assistant",
-      company: "University of Houston",
-      duration: "January 2024 - May 2024",
+      title: "Tax & Payroll Administrative Assistant",
+      company: "Hien Nguyen Tax Services",
+      duration: "May 2023 - December 2023",
       location: "Houston, TX",
       responsibilities: [
-        "Assisted professor in teaching Data Structures and Algorithms",
-        "Conducted weekly office hours and review sessions for 100+ students",
-        "Graded assignments and provided detailed feedback to improve student understanding"
+        "Facilitated communication with clients regarding financial matters and payroll.",
+        "Oversaw the management of employee databases.",
+        "Filed and organized documents related to tax and payroll."
       ]
     },
     {
