@@ -7,14 +7,14 @@ import Card from 'react-bootstrap/Card';
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Engineer Intern",
-      company: "Company Name",
-      duration: "June 2024 - August 2024",
+      title: "Finance & Payroll Coordinator",
+      company: "Spa Nail Equipment",
+      duration: "November 2024 - Present",
       location: "Houston, TX",
       responsibilities: [
-        "Developed and maintained full-stack web applications using React and Node.js",
-        "Improved application performance by 40% through code optimization",
-        "Collaborated with cross-functional teams to deliver features on schedule"
+        "Processed daily cash inflows & banking – deposited client payments to company accounts, reconciled bank receipts in Excel/Google Sheets logs, eliminating posting errors and cutting close time by 20 %.",
+        "Maintained order & disbursement records – updated sales orders, tracked issued company checks, and kept audit-ready files that supported on-time vendor payments and clean month-end reviews.",
+        "Generated financial statements & payroll – built profit-and-loss reports and calculated multi-employee payroll, using Python scripts to integrate Sheets data and produce accurate, same-day reports for management."
       ]
     },
     {
