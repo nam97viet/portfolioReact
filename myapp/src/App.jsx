@@ -9,7 +9,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Experience from './components/Experience';
 import Connect from './components/Connect';
-import Avatar from "./Avatar.png";
 
 function App() {
   return (
@@ -34,7 +33,11 @@ function App() {
                 </p>
               </Col>
               <Col xs={12} md={6}>
-                <img src={Avatar} className="App-logo" alt="logo" />
+                <img 
+                  src={process.env.PUBLIC_URL + '/images/Avatar.png'} 
+                  className="App-logo" 
+                  alt="Nathan Tran" 
+                />
               </Col>
             </Row>
             <Row>
