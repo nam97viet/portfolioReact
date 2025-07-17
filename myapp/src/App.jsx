@@ -34,7 +34,7 @@ function App() {
               </Col>
               <Col xs={12} md={6}>
                 <img 
-                  src={process.env.PUBLIC_URL + '/images/Avatar.png'} 
+                  src={process.env.PUBLIC_URL + '/images/Avatar.jpg'} 
                   className="App-logo" 
                   alt="Nathan Tran" 
                 />
